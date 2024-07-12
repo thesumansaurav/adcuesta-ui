@@ -1,0 +1,95 @@
+@import "../../../variables";
+.main-nav {
+    background-color: transparent;
+    transition: $transition;
+    padding: 15px 0;
+    .container-fluid {
+        max-width: 1615px;
+    }
+    .navbar{
+        background-color: transparent !important;
+    }
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                transition: 0.5s all ease;
+            }
+            .dropdown-menu {
+                box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+                width: 250px;
+                display: block;
+                padding-top: 20px;
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-bottom: 20px;
+                top: 80px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease-in-out;
+                overflow: hidden;
+                li{
+                    border-bottom: 1px dashed #2948ff2e;
+                    .dropdown-item{
+                        transition: 0.5s all ease;
+                        position: relative;
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            width: 0px;
+                            height: 2px;
+                            top: 18px;
+                            left: 0;
+                            background-color: #2948ff;
+                            opacity: 0;
+                            -webkit-transition: 0.5s all ease;
+                            transition: 0.5s all ease;
+                        }
+                        &:hover{
+                            padding-left: 25px;
+                            color: $primary;
+                            background-color: $white-color;
+                            &::after{
+                                width: 13px;
+                                opacity: 1;
+                            }
+                        }
+                        &:focus{
+                            background-color: $white-color;
+                        }
+                        &:active{
+                            background: $white-color;
+                        }
+                    }
+                    &:last-child{
+                        border: 0;
+                    }
+                }
+            }
+            &:hover{
+                .dropdown-menu {
+                    opacity: 1;
+                    visibility: visible;
+                    top: 100%;
+                }
+            }
+        }
+    }
+}
+
+::ng-deep.scrolled{
+    .main-nav {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 20px 0px #dddddd5e;
+        box-shadow: 0px 0px 20px 0px #dddddd5e;
+    }
+}
+
+#mobMenu{
+    .dropdown-toggle::after {
+        right: 0;
+        position: absolute;
+        top: 17px;
+    }
+}
