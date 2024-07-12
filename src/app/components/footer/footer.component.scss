@@ -1,0 +1,189 @@
+@import "../../../variables";
+.footer-area {
+    background-image: unset;
+    position: relative;
+
+    .footer-shape {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        opacity: .20;
+
+        img {
+            height: 100%;
+            z-index: -1;
+        }
+    }
+}
+
+footer {
+    background-color: #222131;
+    background-image: url('/images/footer-shape.png');
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+.footer-item {
+    margin-bottom: 30px; 
+
+    h3 {
+        font-size: 20px;
+        color: $white-color;
+        margin-bottom: 30px;
+    }
+    .footer-logo {
+        a {
+            display: block;
+            margin-bottom: 18px;
+        }
+        p {
+            color: #d8d8d8;
+            margin-bottom: 0;
+            font-size: 15px;
+        }
+    }
+    .footer-links {
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                display: block;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                a {
+                    display: block;
+                    color: #d8d8d8;
+                    font-size: 15px;
+
+                    &:hover {
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+    .footer-address {
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                display: block;
+                font-size: 15px;
+                color: #d8d8d8;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                span {
+                    display: inline-block;
+                    color: $white-color;
+                }
+                a {
+                    display: inline-block;
+                    color: #d8d8d8;
+
+                    &:hover {
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*-- End Footer --*/
+
+/*-- Copyright --*/
+.copyright-area {
+    background-color: #302f3e;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .copyright-item {
+        p {
+            margin-bottom: 0;
+            font-size: 15px;
+            color: #d8d8d8;
+
+            a {
+                display: inline-block;
+                font-weight: 500;
+                color: $white-color;
+                border-bottom: 1px solid $white-color;
+
+                &:hover {
+                    color: #d8d8d8;
+                    border-bottom: 1px solid #d8d8d8;
+                }
+            }
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            text-align: right;
+
+            li {
+                list-style-type: none;
+                display: inline-block;
+                margin-right: 5px;
+
+                &:nth-child(2) {
+                    a {
+                        background-color: #55acee;
+                    }
+                }
+                &:nth-child(3) {
+                    a {
+                        background-color: #3f729b;
+                    }
+                }
+                &:nth-child(4) {
+                    a {
+                        background-color: #ff0000;
+                    }
+                }
+                &:nth-child(5) {
+                    margin-bottom: 0;
+
+                    a {
+                        background-color: #c80000;
+                    }
+                }
+                a {
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    text-align: center;
+                    color: $white-color;
+                    background-color: #3b5998;
+                    font-size: 16px;
+
+                    i {
+                        line-height: 30px;
+                    }
+                    &:hover {
+                        transform: rotateY(360deg);
+                    }
+                }
+            }
+        }
+    }
+}
+/*-- End Copyright --*/
+
+@media only screen and (max-width : 767px) {
+    .copyright-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
