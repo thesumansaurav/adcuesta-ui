@@ -331,7 +331,7 @@
         text-align: center;
 
         h2 {
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -881,6 +881,33 @@
     }
     .banner-img{
         margin-top: 30px;
+    }
+    .banner-area.three {
+        .banner-img {
+            img {
+                &:nth-child(2) {
+                    display: none;
+                }
+                &:nth-child(3) {
+                    display: none;
+                }
+                &:nth-child(4) {
+                    display: none;
+                }
+                &:nth-child(5) {
+                    display: none;
+                }
+                &:nth-child(6) {
+                    display: none;
+                }
+                &:nth-child(7) {
+                    display: none;
+                }
+                &:nth-child(8) {
+                    display: none;
+                }
+            }
+        }
     }
     .service-area.four{
         .service-inner{

@@ -1,4 +1,15 @@
 @import "../../../variables";
+#mobMenu{
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                &.is-active{
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
 .main-nav {
     background-color: transparent;
     transition: $transition;
