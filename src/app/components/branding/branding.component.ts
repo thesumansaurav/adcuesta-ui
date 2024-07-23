@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-blog',
+  selector: 'app-branding',
   standalone: true,
   imports: [RouterModule],
-  templateUrl: './blog.component.html',
-  styleUrl: './blog.component.scss'
+  templateUrl: './branding.component.html',
+  styleUrl: './branding.component.scss'
 })
-export class BlogComponent {
+export class BrandingComponent {
 
 }
