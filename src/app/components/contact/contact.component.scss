@@ -1,6 +1,7 @@
 @import "../../../variables";
 
 .contactus{
+    padding-top: 10%;
     .address-box{
         position: relative;
         display: flex;
@@ -58,4 +59,9 @@
             }
         }
     }
+}
+
+.infosec{
+    background: rgb(41,72,255);
+    background: linear-gradient(0deg, rgba(41,72,255,1) 0%, rgba(41,72,255,1) 80%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
 }
