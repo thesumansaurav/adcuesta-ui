@@ -178,3 +178,21 @@
     }
 }
 /*-- End Mind --*/
+@media only screen and (max-width : 767px) {
+    .about-area-two{
+        padding: 0 12px;
+        .about-content{
+            padding-left: 0;
+        }
+    }
+    .counter-area .counter-item h3{
+        font-size: 20px;
+    }
+    .dcb .border-end {
+        border: none !important;
+    }
+    .mind-area h2 {
+        display: block;
+        padding-bottom: 15px;
+    }
+}
