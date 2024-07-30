@@ -53,3 +53,14 @@
         }
     }
 }
+
+@media only screen and (max-width : 767px) {
+    .service-item-three {
+        padding: 30px 30px 40px;
+        min-height: auto;
+    }
+    .services-area.ptb-100{
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
+}

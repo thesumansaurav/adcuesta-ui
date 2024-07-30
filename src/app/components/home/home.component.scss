@@ -338,7 +338,7 @@
     }
 }
 .service-item-three {
-    margin-bottom: 30px;
+    margin-bottom: 12px;
     border-radius: 5px;
     background-color: #ffdbde;
     padding: 30px 30px 55px;
@@ -848,7 +848,7 @@
         height: 100% !important;
         text-align: center;
         padding-top: 30px;
-        padding-bottom: 80px;    
+        padding-bottom: 20px;    
         .banner-shape {
             img {
                 &:nth-child(1) {
@@ -954,10 +954,13 @@
             margin-bottom: 30px;
         }
         .form-group{
-            margin-bottom: 0px;
+            margin-bottom: 12px;
         }
     }
     .talk-content button {
         margin: 0 auto;
+    }
+    .blog-item{
+        margin-bottom: 12px;
     }
 }

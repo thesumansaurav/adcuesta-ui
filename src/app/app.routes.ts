@@ -15,6 +15,8 @@ import { BlogDetails9Component } from './components/blog-details-9/blog-details-
 import { BlogDetails8Component } from './components/blog-details-8/blog-details-8.component';
 import { BlogDetails7Component } from './components/blog-details-7/blog-details-7.component';
 import { BlogDetails6Component } from './components/blog-details-6/blog-details-6.component';
+import { TermsComponent } from './components/terms/terms.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
       {
@@ -84,5 +86,13 @@ export const routes: Routes = [
       {
         path: 'mvas',
         component: MvasComponent,
+      },
+      {
+        path: 'terms',
+        component: TermsComponent,
+      },
+      {
+        path: 'privacy',
+        component: PrivacyPolicyComponent,
       },
 ];
