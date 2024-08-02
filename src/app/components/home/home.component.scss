@@ -341,7 +341,7 @@
     margin-bottom: 12px;
     border-radius: 5px;
     background-color: #ffdbde;
-    padding: 30px 30px 55px;
+    padding: 30px 30px;
     transition: $transition;
 
     &:hover {
@@ -400,7 +400,7 @@
     }
     .service-link {
         position: relative;
-
+        margin-bottom: 25px;
         img {
             position: absolute;
             top: 0;
@@ -846,7 +846,6 @@
 @media only screen and (max-width : 767px) {
     .banner-area {
         height: 100% !important;
-        text-align: center;
         padding-top: 30px;
         padding-bottom: 20px;    
         .banner-shape {
@@ -869,8 +868,8 @@
             font-size: 16px;
         }
         h1 {
-            font-size: 32px;
-            line-height: 54px;
+            font-size: 26px;
+            line-height: 33px;
         }
         p {
             font-size: 16px;
