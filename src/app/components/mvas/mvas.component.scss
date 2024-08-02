@@ -4,7 +4,7 @@
     margin-bottom: 0;
     border-radius: 5px;
     background-color: #f3f4ff;
-    padding: 30px 30px 55px;
+    padding: 30px 30px;
     transition: $transition;
     min-height: 415px;
     border: 1px solid transparent;
@@ -30,7 +30,7 @@
     }
     .service-link {
         position: relative;
-
+        margin-bottom: 30px;
         img {
             position: absolute;
             top: 0;
