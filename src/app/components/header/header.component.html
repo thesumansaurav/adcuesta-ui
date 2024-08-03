@@ -1,10 +1,10 @@
-<div class="mob-nav fixed-top bg-primary d-flex d-md-none align-items-center py-2">
+<div class="mob-nav fixed-top bg-primary d-flex d-md-none align-items-center justify-content-between py-2">
+    <div class="logo ms-3">
+        <img src="/images/logo-white.png" alt="">
+    </div>
     <button class="btn btn-primary px-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobMenu" aria-controls="mobMenu">
         <i class='bx bx-menu-alt-left fs-1'></i>
     </button>
-    <div class="logo">
-        <img src="/images/logo-white.png" alt="">
-    </div>
 </div>
 <div class="offcanvas offcanvas-start" tabindex="-1" id="mobMenu" aria-labelledby="mobMenuLabel">
 <div class="offcanvas-header bg-primary py-2">
@@ -27,9 +27,8 @@
                 Services
                 </a>
                 <ul class="dropdown-menu rounded-0 border-0">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#" routerLink="/branding" data-bs-dismiss="offcanvas" aria-label="Close">Branding</a></li>
+                    <li><a class="dropdown-item" href="#" routerLink="/mvas" data-bs-dismiss="offcanvas" aria-label="Close">mVAS</a></li>
                 </ul>
             </li>
             <li class="nav-item">
@@ -63,9 +62,8 @@
                         Services
                     </a>
                     <ul class="dropdown-menu p-0 border-0">
-                        <li><a class="dropdown-item" href="#">Service Style One</a></li>
-                        <li><a class="dropdown-item" href="#">Service Style Two</a></li>
-                        <li><a class="dropdown-item" href="#">Service Details</a></li>
+                        <li><a class="dropdown-item" href="#" routerLink="/branding">Branding</a></li>
+                        <li><a class="dropdown-item" href="#" routerLink="/mvas">mVAS</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
