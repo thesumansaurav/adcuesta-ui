@@ -1,20 +1,23 @@
 import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { Header2Component } from './components/header2/header2.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, Header2Component,RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'dilx';
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2) {
+    localStorage.getItem('header')
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -28,4 +31,5 @@ export class AppComponent {
       this.renderer.removeClass(navbar, 'scrolled');
     }
   }
+
 }
