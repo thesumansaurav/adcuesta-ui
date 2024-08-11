@@ -6,3 +6,13 @@ $grey-color: #565353;
 $blue-color: #2948ff;
 $white-color: #fff;
 $transition: .5s all ease;
+
+$warning: #f6c131;
+
+$white: #ffffff;
+$black: #000000;
+
+
+$gradient: linear-gradient(180deg, rgba($white, .15), rgba($primary, 0));
+$gradient-radial:radial-gradient(circle, rgba(71,62,253,1) 0%, rgba(252,70,107,1) 100%);
+$gradient-2: linear-gradient(9deg, rgba(71,62,253,1) 0%, rgba(255,0,245,1) 100%);

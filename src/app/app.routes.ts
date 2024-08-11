@@ -17,6 +17,7 @@ import { BlogDetails7Component } from './components/blog-details-7/blog-details-
 import { BlogDetails6Component } from './components/blog-details-6/blog-details-6.component';
 import { TermsComponent } from './components/terms/terms.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { GenAiComponent } from './components/gen-ai/gen-ai.component';
 
 export const routes: Routes = [
       {
@@ -34,6 +35,10 @@ export const routes: Routes = [
       {
         path: 'blog',
         component: BlogComponent,
+      },
+      {
+        path: 'genai',
+        component: GenAiComponent,
       },
       {
         path: 'blog-details',
