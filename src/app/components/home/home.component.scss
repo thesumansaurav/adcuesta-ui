@@ -128,9 +128,9 @@
     }
     h1 {
         color: $black-color;
-        font-size: 80px;
+        font-size: 60px;
         margin-bottom: 10px;
-        line-height: 100px;
+        line-height: 80px;
     }
     p {
         font-size: 20px;
@@ -884,9 +884,6 @@
             }
         }
     }
-    .banner-btn{
-        margin: 0 auto;
-    }
     .banner-img{
         margin-top: 30px;
     }
@@ -942,7 +939,7 @@
             justify-content: center;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: start;
             ul{
                 margin-bottom: 30px;
             }
@@ -955,9 +952,6 @@
         .form-group{
             margin-bottom: 12px;
         }
-    }
-    .talk-content button {
-        margin: 0 auto;
     }
     .blog-item{
         margin-bottom: 12px;
