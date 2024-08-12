@@ -165,7 +165,9 @@ img {
     background-color: $blue-color;
     position: relative;
     overflow: hidden;
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
     .bg-text {
         span {
             display: block;
