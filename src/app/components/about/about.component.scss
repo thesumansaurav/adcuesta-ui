@@ -181,8 +181,22 @@
 @media only screen and (max-width : 767px) {
     .about-area-two{
         padding: 0 12px;
+        margin-bottom: 0;
         .about-content{
             padding-left: 0;
+            margin-bottom: 0;
+            .section-title{
+                margin-bottom: 15px !important;
+            }
+        }
+        .pb-70{
+            padding-bottom: 0 !important;
+        }
+        .pt-100{
+            padding-top: 0;
+        }
+        .pt-70{
+            padding-top: 0;
         }
     }
     .counter-area .counter-item h3{
@@ -194,5 +208,8 @@
     .mind-area h2 {
         display: block;
         padding-bottom: 15px;
+    }
+    .counter-area{
+        padding-top: 0 !important;
     }
 }
