@@ -33,7 +33,9 @@ footer {
 }
 .footer-item {
     margin-bottom: 30px; 
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     h3 {
         font-size: 20px;
         color: $white-color;
@@ -191,10 +193,13 @@ footer {
     .copyright-item {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center; 
     }
-    .footer-item h3 {
-        margin-bottom: 10px;
+    .footer-item{
+        justify-content: start;
+        h3 {
+            margin-bottom: 10px;
+        }
     }
 }
 
