@@ -1,6 +1,6 @@
 <div class="mob-nav fixed-top bg-primary d-flex d-md-none align-items-center justify-content-between py-2">
-    <div class="logo ms-3">
-        <img src="/images/logo-white.png" alt="">
+    <div class="logo ms-3" routerLink="/home">
+        <img src="/images/logo-white.svg" alt="">
     </div>
     <button class="btn btn-primary px-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobMenu" aria-controls="mobMenu">
         <i class='bx bx-menu-alt-left fs-1'></i>
@@ -8,8 +8,8 @@
 </div>
 <div class="offcanvas offcanvas-start" tabindex="-1" id="mobMenu" aria-labelledby="mobMenuLabel">
 <div class="offcanvas-header bg-primary py-2">
-    <div class="logo">
-        <img src="/images/logo-white.png" alt="">
+    <div class="logo" routerLink="/home">
+        <img src="/images/logo-white.svg" alt="">
     </div>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 </div>
@@ -45,10 +45,11 @@
 </div>
 </div>
 <!-- Web Menu -->
+ <header [class.scrolled]="isScrolled">
 <div class="main-nav fixed-top d-none d-md-block">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="/images/logo.png" alt=""></a>
+        <a class="navbar-brand" routerLink="/home"><img src="/images/logo.svg" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -88,3 +89,4 @@
         </div>
     </nav>
 </div>
+</header>

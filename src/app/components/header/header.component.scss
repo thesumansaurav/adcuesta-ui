@@ -19,6 +19,9 @@
     }
     .navbar{
         background-color: transparent !important;
+        .navbar-brand{
+            width: 180px;
+        }
     }
     .navbar-nav{
         .nav-item{
@@ -98,6 +101,11 @@
 }
 
 #mobMenu{
+    .offcanvas-header{
+        .logo{
+            width: 180px;
+        }
+    }
     .dropdown-toggle::after {
         right: 0;
         position: absolute;
@@ -105,5 +113,10 @@
     }
     .dropdown-item{
         font-size: 16px;
+    }
+}
+.mob-nav{
+    .logo{
+        width: 180px;
     }
 }
