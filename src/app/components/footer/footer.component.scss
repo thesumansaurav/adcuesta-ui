@@ -193,7 +193,12 @@ footer {
     .copyright-item {
         display: flex;
         align-items: center;
-        justify-content: center; 
+        justify-content: start; 
+        p {
+            width: 300px;
+            line-height: 22px;
+            margin-bottom: 10px !important;
+        }
     }
     .footer-item{
         justify-content: start;

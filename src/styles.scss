@@ -76,6 +76,9 @@ img {
 .pb-100 {
     padding-bottom: 100px;
 }
+.fs-7{
+    font-size: 12px;
+}
 
 .clip-text{
     background: $gradient-2;
@@ -162,16 +165,16 @@ img {
 .page-title-area {
     height: 430px;
     text-align: center;
-    background-color: $blue-color;
+    background-color: rgba($blue-color, 0.2);
     position: relative;
     overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: bottom center !important;
     .bg-text {
         span {
             display: block;
-            color: #2542f0;
+            color: rgba($blue-color, 0.05);;
             font-size: 260px;
             position: absolute;
             top: -75px;
@@ -189,7 +192,7 @@ img {
         h2 {
             font-size: 40px;
             margin-bottom: 5px;
-            color: $white-color;
+            // color: $white-color;
         }
         ul {
             margin: 0;
@@ -207,7 +210,7 @@ img {
                     content: '/';
                     top: 0;
                     right: -15px;
-                    color: $white-color;
+                    // color: $white-color;
                 }
                 &:last-child {
                     &:before {
@@ -216,7 +219,7 @@ img {
                 }
                 a {
                     display: inline-block;
-                    color: $white-color;
+                    // color: $white-color;
                     
                     &:hover {
                         letter-spacing: 1px;
@@ -224,7 +227,7 @@ img {
                 }
                 span {
                     display: inline-block;
-                    color: $white-color;
+                    // color: $white-color;
                 }
             }
         }
@@ -274,15 +277,16 @@ img {
     }
 }
 
+/*----- Blog Details CSS -----*/
 .blog-details-area {
     .details-item {
         img {
             width: 100%;
         }
         .details-img {
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             position: relative;
-            margin-top: 30px;
+            margin-top: 15px;
 
             h4 {
                 max-width: 90px;
@@ -296,8 +300,8 @@ img {
                 margin-bottom: 0;
                 line-height: 30px;
                 position: absolute;
-                right: 30px;
-                top: -30px;
+                right: 15px;
+                top: 15px;
 
                 span {
                     display: inline-block;
@@ -376,7 +380,7 @@ img {
             }
         }
         .details-digital {
-            margin-bottom: 50px;
+            margin-bottom: 15px;
 
             h3 {
                 font-size: 25px;
@@ -411,7 +415,7 @@ img {
         }
     }
 }
-
+/*----- End Blog Details CSS -----*/
 
 .features-box{
     padding: 20px;
@@ -601,6 +605,107 @@ img {
         }
     }
 }
+
+/*-- Blog --*/
+.blog-area {
+    .section-title.two {
+        text-align: center;
+        margin-top: -12px;
+    }
+}
+.blog-item {
+    box-shadow: 0px 0px 20px 0px #dddddd6b;
+    border-radius: 5px;
+    padding: 0;
+    transition: $transition;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 0;
+    overflow: hidden;
+    .top {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+        z-index: 1;
+        position: relative;
+
+        li {
+            list-style-type: none;
+            display: inline-block;
+            color: #221668;
+            font-size: 15px;
+            margin-right: 12px;
+            position: relative;
+            padding-left: 12px;
+            transition: $transition;
+
+            &:before {
+                position: absolute;
+                content: '';
+                width: 5px;
+                height: 5px;
+                left: 0;
+                top: 8px;
+                border-radius: 50%;
+                background-color: #221668;
+                transition: $transition;
+            }
+        }
+    }
+    h3 {
+        font-size: 22px;
+        margin-bottom: 8px;
+        z-index: 1;
+        position: relative;
+
+        a {
+            color: #221668;
+        }
+    }
+    p {
+        margin-bottom: 30px;
+        z-index: 1;
+        position: relative;
+        transition: $transition;
+    }
+    .bottom {
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+        position: relative;
+
+        li {
+            list-style-type: none;
+            display: inline-block;
+            font-size: 15px;
+
+            img {
+                border-radius: 50%;
+                border: 5px solid $white-color;
+                box-shadow: 0px 0px 20px 0px #ddddddab;
+                margin-right: 10px;
+                transition: $transition;
+            }
+            span {
+                display: inline-block;
+                transition: $transition;
+            }
+            a {
+                display: inline-block;
+                color: $black-color;
+
+                &:hover {
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+/*-- End Blog --*/
+
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
