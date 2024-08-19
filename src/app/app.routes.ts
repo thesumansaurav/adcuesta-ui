@@ -40,40 +40,41 @@ export const routes: Routes = [
         path: 'genai',
         component: GenAiComponent,
       },
+     
       {
-        path: 'blog-details',
+        path: 'SEO-Mistakes-to-Avoid:-Common-Pitfalls-and-How-to-Fix-Them',
         component: BlogDetailsComponent,
       },
       {
-        path: 'blog2',
+        path: 'Security-and-Fraud-Prevention-in-Direct-Carrier-Billing:-How-Safe-Are-We',
         component: BlogDetails2Component,
       },
       {
-        path: 'blog3',
+        path: 'Content-Marketing-Ethics:-Balancing-Authenticity-and-Persuasion',
         component: BlogDetails3Component,
       },
       {
-        path: 'blog4',
+        path: 'The-Role-of-AI-in-Campaign-Management:-Friend-or-Foe',
         component: BlogDetails4Component,
       },
       {
-        path: 'blog5',
+        path: 'The-Psychology-of-Campaigns:-Understanding-What-Makes-Audiences-Tick',
         component: BlogDetails5Component,
       },
       {
-        path: 'blog6',
+        path: 'Digital-Transformation-in-MENA:-How-Telecom-is-leading-the-way',
         component: BlogDetails6Component,
       },
       {
-        path: 'blog7',
+        path: 'Predicting-the-Future-of-MVAS-Content-Marketing:-Key-Trends-to-Watch',
         component: BlogDetails7Component,
       },
       {
-        path: 'blog8',
+        path: 'The-Power-of-Consistency:-Maintaining-your-Brand-Voice-across-all-Platforms',
         component: BlogDetails8Component,
       },
       {
-        path: 'blog9',
+        path: 'Personal-vs-Business-Branding:-Striking-the-Right-Balance',
         component: BlogDetails9Component,
       },
       {
