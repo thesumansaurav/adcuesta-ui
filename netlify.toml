@@ -1,0 +1,7 @@
+[build]
+  publish = "dist/dlix/browser"  # Replace "dist" with the path to your Angular build output folder
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
