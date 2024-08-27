@@ -11,7 +11,8 @@
     }
 }
 .main-nav {
-    background-color: transparent;
+    background: rgb(255,193,0);
+    background: linear-gradient(0deg, rgba(255,193,0,0) 0%, rgba(255,255,255,0.5) 100%);
     transition: $transition;
     padding: 15px 0;
     .container-fluid {
@@ -94,9 +95,10 @@
     .main-nav {
         padding-top: 5px;
         padding-bottom: 5px;
-        background-color: #fff;
+        background-color: rgba($white-color, 0.9);
         -webkit-box-shadow: 0px 0px 20px 0px #dddddd5e;
         box-shadow: 0px 0px 20px 0px #dddddd5e;
+        backdrop-filter: blur(15px);
     }
 }
 
