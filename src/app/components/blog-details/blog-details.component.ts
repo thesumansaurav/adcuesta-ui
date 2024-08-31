@@ -1,4 +1,6 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
+import { AppConstantService } from '../../app-constant.service';
 
 @Component({
   selector: 'app-blog-details',
@@ -10,6 +12,15 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 export class BlogDetailsComponent implements AfterViewInit{
   @ViewChild('sourceDiv') sourceDiv!: ElementRef;
   @ViewChild('targetDiv') targetDiv!: ElementRef;
+
+  constructor(
+    private title: Title,
+    private meta : Meta,
+    private appConstant: AppConstantService
+  ){
+    this.title.setTitle(this.appConstant.SEODATA.BLOG_DETAILS.title);
+    this.meta.updateTag({name: 'description', content: this.appConstant.SEODATA.BLOG_DETAILS.description});
+  }
 
   ngAfterViewInit(): void {
     // Get the height of the sourceDiv
