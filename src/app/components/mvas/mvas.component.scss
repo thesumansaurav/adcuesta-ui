@@ -1,25 +1,35 @@
 @import "../../../variables";
 
-.service-item-three {
-    background-color: #f3f4ff;
-    min-height: 415px;
-    border: 1px solid transparent;
-    margin: 0;
+.services-items-box{
+    padding: 55px 60px;
+    border: 1px solid var(--tp-border-1);
+    border-radius: 20px;
+    transition: 0.4s;
+    text-align: center;
+    .iconimage{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    h3{
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    p{
+        color: $secondary;
+        margin: 0;
+        line-height: 30px;
+    }
     &:hover {
-        transform: translate(0, -10px);
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-        border-color: $primary;
-        .service-link {
-            img {
-                transform: rotateY(360deg);
-            }
-        }
+        box-shadow: 0px 55px 89px rgba(0, 0, 0, 0.1);
     }
 }
 
 @media only screen and (max-width : 767px) {
-    .service-item-three {
-        padding: 30px 30px 40px;
-        min-height: auto;
+    .services-items-box{
+        padding: 25px 20px;
     }
 }
