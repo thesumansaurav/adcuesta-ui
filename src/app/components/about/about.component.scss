@@ -213,3 +213,30 @@
         padding-top: 0 !important;
     }
 }
+
+.cta-big-text{
+    font-weight: 600;
+    font-size: 122px;
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
+    -webkit-text-stroke: 1px #000;
+    color: transparent;
+    transition: .4s;
+    a{
+        font-family: "Poppins", system-ui;
+        color: transparent;
+        &:hover{
+            color: #000;
+        }
+    }
+    
+    @media (max-width: 991.98px) {
+        font-size: 95px;
+    }
+    @media (max-width: 767.98px) {
+        font-size: 75px;
+    }
+    @media (max-width: 575.98px) {
+        font-size: 55px;
+    }
+}
