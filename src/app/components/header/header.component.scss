@@ -1,124 +1,35 @@
-@import "../../../variables";
-#mobMenu{
+@import "../../../scss/variables";
+nav{
     .navbar-nav{
+        gap: 10px;
         .nav-item{
             .nav-link{
-                &.is-active{
-                    color: $primary;
+                border-radius: 20px 20px 0px 20px;
+                transition: all 500ms ease;
+                &.active{
+                    background: $gradient1 !important;
+                    color: $white;
+                }
+                &:hover{
+                    background: $gradient1 !important;
+                    color: $white;
                 }
             }
-        }
-    }
-}
-.main-nav {
-    background: rgb(255,193,0);
-    background: linear-gradient(0deg, rgba(255,193,0,0) 0%, rgba(255,255,255,0.5) 100%);
-    transition: $transition;
-    padding: 15px 0;
-    .container-fluid {
-        max-width: 1615px;
-    }
-    .navbar{
-        background-color: transparent !important;
-        .navbar-brand{
-            width: 180px;
-        }
-    }
-    .navbar-nav{
-        .nav-item{
-            .nav-link{
-                transition: 0.5s all ease;
-            }
-            .dropdown-menu {
-                box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
-                width: 250px;
-                display: block;
-                padding-top: 20px;
-                padding-left: 5px;
-                padding-right: 5px;
-                padding-bottom: 20px;
-                top: 80px;
-                opacity: 0;
+            .dropdown-menu{
+                display: block !important;
                 visibility: hidden;
-                transition: all 0.3s ease-in-out;
-                overflow: hidden;
-                li{
-                    border-bottom: 1px dashed #2948ff2e;
-                    .dropdown-item{
-                        transition: 0.5s all ease;
-                        position: relative;
-                        &::after {
-                            position: absolute;
-                            content: '';
-                            width: 0px;
-                            height: 2px;
-                            top: 18px;
-                            left: 0;
-                            background-color: #2948ff;
-                            opacity: 0;
-                            -webkit-transition: 0.5s all ease;
-                            transition: 0.5s all ease;
-                        }
-                        &:hover{
-                            padding-left: 25px;
-                            color: $primary;
-                            background-color: $white-color;
-                            &::after{
-                                width: 13px;
-                                opacity: 1;
-                            }
-                        }
-                        &:focus{
-                            background-color: $white-color;
-                        }
-                        &:active{
-                            background: $white-color;
-                        }
-                    }
-                    &:last-child{
-                        border: 0;
-                    }
-                }
+                opacity: 0;
+                transform: translateY(30px);
+                transform-origin: top;
+                transition: all 500ms ease;
             }
             &:hover{
-                .dropdown-menu {
-                    opacity: 1;
+                .dropdown-menu{
                     visibility: visible;
-                    top: 100%;
+                    opacity: 1;
+                    transform: translateY(0px);
                 }
             }
         }
-    }
-}
-
-::ng-deep.scrolled{
-    .main-nav {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        background-color: rgba($white-color, 0.9);
-        -webkit-box-shadow: 0px 0px 20px 0px #dddddd5e;
-        box-shadow: 0px 0px 20px 0px #dddddd5e;
-        backdrop-filter: blur(15px);
-    }
-}
-
-#mobMenu{
-    .offcanvas-header{
-        .logo{
-            width: 180px;
-        }
-    }
-    .dropdown-toggle::after {
-        right: 0;
-        position: absolute;
-        top: 17px;
-    }
-    .dropdown-item{
-        font-size: 16px;
-    }
-}
-.mob-nav{
-    .logo{
-        width: 180px;
     }
 }

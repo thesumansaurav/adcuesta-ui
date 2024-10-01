@@ -1,0 +1,43 @@
+{
+  "hash": "969aa08f",
+  "configHash": "184ee41f",
+  "lockfileHash": "0bd2f0a6",
+  "browserHash": "416007fa",
+  "optimized": {
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "3888cb05",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "9721896e",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "bfc372b0",
+      "needsInterop": false
+    },
+    "parallax-js": {
+      "src": "../../../../../node_modules/parallax-js/dist/parallax.js",
+      "file": "parallax-js.js",
+      "fileHash": "455e8476",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-R4QWWUPN": {
+      "file": "chunk-R4QWWUPN.js"
+    },
+    "chunk-TNEBKTSI": {
+      "file": "chunk-TNEBKTSI.js"
+    },
+    "chunk-EIB7IA3J": {
+      "file": "chunk-EIB7IA3J.js"
+    }
+  }
+}
