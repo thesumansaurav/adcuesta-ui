@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dilx": {
+    "dilx-n": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/dilx",
+            "outputPath": "dist/dilx-n",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -32,26 +32,22 @@
               }
             ],
             "styles": [
-              "node_modules/bootstrap/scss/bootstrap.scss",
-              "node_modules/@flaticon/flaticon-uicons/css/all/all.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "15MB"
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2MB",
-                  "maximumError": "4MB"
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
                 }
               ],
               "outputHashing": "all"
@@ -68,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "dilx:build:production"
+              "buildTarget": "dilx-n:build:production"
             },
             "development": {
-              "buildTarget": "dilx:build:development"
+              "buildTarget": "dilx-n:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,6 +100,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "ee6a432f-0f3a-405c-979b-de23747f1816"
   }
 }
