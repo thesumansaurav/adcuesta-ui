@@ -109,7 +109,7 @@ import {
   ɵɵinject,
   ɵɵinjectAttribute,
   ɵɵstyleProp
-} from "./chunk-TNEBKTSI.js";
+} from "./chunk-QOZOTXC5.js";
 import {
   __async,
   __objRest,
@@ -9120,6 +9120,13 @@ export {
   PathLocationStrategy,
   HashLocationStrategy,
   Location,
+  NgClass,
+  NgForOf,
+  NgIf,
+  NgStyle,
+  NgTemplateOutlet,
+  CommonModule,
+  isPlatformBrowser,
   ViewportScroller,
   BrowserDomAdapter,
   BrowserGetTestability,
@@ -9181,4 +9188,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-R4QWWUPN.js.map
+//# sourceMappingURL=chunk-UFYP6YBA.js.map
