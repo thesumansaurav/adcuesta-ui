@@ -17,4 +17,6 @@ $container-max-widths: (
 
 @import "scss/globle";
 @import "../node_modules/animate.css/animate.min.css";
+@import '../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 @import "../node_modules/bootstrap/scss/bootstrap";
