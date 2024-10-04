@@ -2,7 +2,8 @@ import {
   ActivatedRoute,
   NavigationEnd,
   Router
-} from "./chunk-C6JZJVOZ.js";
+} from "./chunk-AP2N5A25.js";
+import "./chunk-HYC2HD5J.js";
 import {
   CommonModule,
   DOCUMENT,
@@ -13,7 +14,7 @@ import {
   NgStyle,
   NgTemplateOutlet,
   isPlatformBrowser
-} from "./chunk-UFYP6YBA.js";
+} from "./chunk-OWFMCAJO.js";
 import {
   ANIMATION_MODULE_TYPE,
   Attribute,
