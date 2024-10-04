@@ -1,15 +1,28 @@
-import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, ViewChild, OnInit } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { NgwWowModule, NgwWowService } from 'ngx-wow';
 import Parallax from 'parallax-js';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CarouselModule ],
+  imports: [CarouselModule  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit, OnInit {
+
+  constructor(private wowService: NgwWowService) {
+  }
+
+  ngOnInit() {
+    this.wowService.init();
+  }
+
+  reset() {
+    this.wowService.init();
+  }
+
   @ViewChild('parallaxScene', { static: false }) parallaxScene!: ElementRef;
   @ViewChild('parallaxScene2', { static: false }) parallaxScene2!: ElementRef;
 

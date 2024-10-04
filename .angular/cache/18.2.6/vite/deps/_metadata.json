@@ -1,46 +1,55 @@
 {
-  "hash": "20283070",
-  "configHash": "26088bfb",
-  "lockfileHash": "feaa4785",
-  "browserHash": "c1c20f0e",
+  "hash": "762af5de",
+  "configHash": "7db575cf",
+  "lockfileHash": "7110996f",
+  "browserHash": "1fb22bd4",
   "optimized": {
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "c392f235",
+      "fileHash": "fe716074",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "1d766590",
+      "fileHash": "00f4dfbc",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "33ab5ec2",
+      "fileHash": "5cb84ea5",
       "needsInterop": false
     },
     "ngx-owl-carousel-o": {
       "src": "../../../../../node_modules/ngx-owl-carousel-o/fesm2022/ngx-owl-carousel-o.mjs",
       "file": "ngx-owl-carousel-o.js",
-      "fileHash": "bea7dd51",
+      "fileHash": "fda9c6fd",
+      "needsInterop": false
+    },
+    "ngx-wow": {
+      "src": "../../../../../node_modules/ngx-wow/esm5/ngx-wow.es5.js",
+      "file": "ngx-wow.js",
+      "fileHash": "0071b0fa",
       "needsInterop": false
     },
     "parallax-js": {
       "src": "../../../../../node_modules/parallax-js/dist/parallax.js",
       "file": "parallax-js.js",
-      "fileHash": "4cd4a606",
+      "fileHash": "913ceef8",
       "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-C6JZJVOZ": {
-      "file": "chunk-C6JZJVOZ.js"
+    "chunk-AP2N5A25": {
+      "file": "chunk-AP2N5A25.js"
     },
-    "chunk-UFYP6YBA": {
-      "file": "chunk-UFYP6YBA.js"
+    "chunk-HYC2HD5J": {
+      "file": "chunk-HYC2HD5J.js"
+    },
+    "chunk-OWFMCAJO": {
+      "file": "chunk-OWFMCAJO.js"
     },
     "chunk-QOZOTXC5": {
       "file": "chunk-QOZOTXC5.js"
