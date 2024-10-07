@@ -1478,3 +1478,92 @@
     }
 }
 
+
+
+
+@media (max-width: 575.98px) {
+    .banner-section{
+        padding: 50px 0px 50px 0px;
+        .content-box{
+            h1{
+                font-size: 35px;
+                line-height: 45px;
+            }
+        }
+        .vector-icon{
+            display: none;
+        }
+        .shap-layer{
+            display: none;
+        }
+        .theme-btn{
+            width: 100%;
+        }
+        .bg-layer{
+            background-size: auto;
+        }
+    }
+
+    .sliding-text-one{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .sliding-text-one__animate-text{
+            span {
+                font-size: 42px;
+            }
+        }
+    }
+
+    .about-section{
+        padding-bottom: 50px;
+        overflow: hidden;
+        #image_block_01{
+            .image-box{
+                margin-left: 0;
+            }
+        }
+    }
+    .chooseus-section {
+        padding: 50px 0px;
+    }
+    .service-section{
+        padding: 50px 0px;
+        .parallax-icon {
+            display: none;
+        }
+        .service-block{
+            .service-block-one {
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .fun-facts {
+        padding: 50px 0px;
+    }
+    .sec-title h3, .sec-title .h3 {
+        font-size: 28px !important;
+        line-height: 37px;
+    }
+    .news-section{
+        padding: 50px 0px;
+        .parallax-icon {
+            display: none;
+        }
+    }
+
+    .chooseus-section{
+        overflow: hidden;
+        .image-box{
+            .bg-layer {
+                background-size: cover;
+            }
+        }
+    }
+    .subscribe-section{
+        .vector-icon {
+            display: none;
+        }
+    }
+
+   
+}
