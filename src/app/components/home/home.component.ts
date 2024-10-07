@@ -16,7 +16,9 @@ export class HomeComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit() {
-    this.wowService.init();
+    if (window.innerWidth > 768) {  // Adjust the width threshold as needed
+      this.wowService.init();  // Initialize wowService only for screens wider than 768px
+    }
   }
 
   reset() {

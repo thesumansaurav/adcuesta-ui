@@ -358,3 +358,14 @@ ul, li {
        }
   }
    
+  @media (max-width: 575.98px) {
+    .main-footer{
+      .footer-top {
+        padding: 35px 0px;
+        background: #070c34;
+      }
+      .widget-content {
+        margin-bottom: 30px;
+      }
+    }
+  }

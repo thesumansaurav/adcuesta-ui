@@ -7,6 +7,8 @@ $nav-link-font-size: 16px;
 $nav-link-font-weight:600;
 $navbar-nav-link-padding-x: 20px;
 
+$offcanvas-horizontal-width: 300px;
+
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -14,8 +16,8 @@ $container-max-widths: (
   xl: 1140px,
   xxl: 1200px
 );
-
 @import "scss/globle";
+@import "scss/responsive";
 @import "../node_modules/animate.css/animate.min.css";
 @import '../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
