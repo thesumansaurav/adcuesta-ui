@@ -64,15 +64,14 @@ ul, li {
     font-family: 'Poppins', sans-serif;
     color: #fff;
     margin-bottom: 10px;
-    padding-left: 25px;
   }
   
   .main-footer .footer-top .logo-widget .widget-content li a{
     color: #fff;
-  }
-  
-  .main-footer .footer-top .logo-widget .widget-content li a:hover{
-    
+    padding-left: 25px;
+    position: relative;
+    font-size: 14px;
+    line-height: 24px;
   }
   
   .main-footer .footer-top .logo-widget{
@@ -133,7 +132,7 @@ ul, li {
   .main-footer .footer-top .links-widget .widget-content ul li{
     position: relative;
     float: left;
-    width: 50%;
+    width: 100%;
     margin-bottom: 12px;
   }
   

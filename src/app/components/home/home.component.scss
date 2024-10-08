@@ -65,7 +65,7 @@
         .vector-4 {
             width: 390px;
             height: 1070px;
-            right: 550px;
+            right: 310px;
             top: 180px;
             background-repeat: no-repeat;
             background-size: 100%;
@@ -1274,9 +1274,9 @@
     background: -webkit-linear-gradient(0deg, #842af1, #033da4 50%);
     .vector-icon {
         position: absolute;
-        left: 0px;
+      //  left: 0px;
         top: 0px;
-        right: 0px;
+        right: 200px;
         max-width: 1920px;
         width: 100%;
         height: 100%;
@@ -1566,4 +1566,44 @@
     }
 
    
+}
+
+@media (max-width: 1399.98px) {
+    .banner-section{
+        .vector-icon{
+            .vector-3 {
+                width: 80px;
+                height: 80px;
+                background-repeat: no-repeat;
+                left: 20px;
+                top: 550px;
+                background-size: cover;
+            }
+        }
+    }
+    .subscribe-section{
+        .vector-icon{
+            .vector-4 {
+                left: 100px;
+                top: -75px;
+                background-repeat: no-repeat;
+                width: 487px;
+                height: 564px;
+                z-index: 1;
+            }
+            .vector-5{
+                left: -10px;
+            }
+            .vector-6{
+                left: -20px;
+            }
+        }
+    }
+    .service-section{
+        .parallax-icon{
+            .bubble-1 {
+                left: 40px !important;
+            }
+        }
+    }
 }
