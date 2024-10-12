@@ -1,6 +1,6 @@
 import {
   CommonModule
-} from "./chunk-OWFMCAJO.js";
+} from "./chunk-JNREMGIH.js";
 import {
   Injectable,
   NgModule,
