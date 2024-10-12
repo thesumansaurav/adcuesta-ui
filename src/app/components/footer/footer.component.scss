@@ -362,9 +362,33 @@ ul, li {
       .footer-top {
         padding: 35px 0px;
         background: #070c34;
+        .links-widget{
+          .widget-content{
+            ul{
+              li{
+                a {
+                  position: relative;
+                  display: inline-block;
+                  font-size: 14px;
+                  font-family: "Poppins", sans-serif;
+                  line-height: 24px;
+                  color: #9d9d9d;
+                  padding-left: 15px;
+                  white-space: nowrap;
+                }
+              }
+            }
+          }
+        }
       }
       .widget-content {
         margin-bottom: 30px;
       }
     }
+    .copyright p {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
   }

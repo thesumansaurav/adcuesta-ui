@@ -1,15 +1,22 @@
+import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   isScrolled = false;
+  constructor(private router: Router) {
+  }
+
+  isHomePage(): boolean {
+    return this.router.url === '/';  // Adjust this if your home route is different
+  }
 
   // HostListener listens for the scroll event
   @HostListener('window:scroll', [])
