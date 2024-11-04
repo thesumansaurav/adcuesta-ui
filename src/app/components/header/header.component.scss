@@ -24,6 +24,9 @@ nav{
                 transform: translateY(30px);
                 transform-origin: top;
                 transition: all 500ms ease;
+                border-radius: 20px;
+                border: 0;
+                padding: 20px 10px;
             }
             &:hover{
                 .dropdown-menu{

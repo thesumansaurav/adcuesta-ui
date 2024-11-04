@@ -13,6 +13,10 @@ import { Blog6Component } from './components/blog6/blog6.component';
 import { Blog7Component } from './components/blog7/blog7.component';
 import { Blog9Component } from './components/blog9/blog9.component';
 import { Blog8Component } from './components/blog8/blog8.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
+import { GenaiComponent } from './components/genai/genai.component';
+import { TermsComponent } from './components/terms/terms.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
       {
@@ -71,4 +75,20 @@ export const routes: Routes = [
         path: 'Personal-vs-Business-Branding:-Striking-the-Right-Balance',
         component: Blog9Component,
       },
+      {
+        path:'contact',
+        component:ContactusComponent
+      },
+      {
+        path:'genai',
+        component:GenaiComponent
+      },
+      {
+        path:'terms',
+        component:TermsComponent
+      },
+      {
+        path:'privacy-policy',
+        component:PrivacyPolicyComponent
+      }
 ];
