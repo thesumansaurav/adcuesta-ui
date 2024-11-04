@@ -118,6 +118,8 @@
             transition: all 500ms ease;
             height: 100%;
             .inner-box{
+                position: relative;
+                z-index: 1;
                 .icon-box {
                     position: relative;
                     display: inline-block;

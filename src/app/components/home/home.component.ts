@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component, ElementRef, AfterViewInit, ViewChild, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { NgwWowModule, NgwWowService } from 'ngx-wow';
 import Parallax from 'parallax-js';
@@ -6,7 +8,7 @@ import Parallax from 'parallax-js';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CarouselModule  ],
+  imports: [CarouselModule, RouterModule, CommonModule  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
