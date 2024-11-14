@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-genai',
   standalone: true,
-  imports: [CarouselModule],
+  imports: [CarouselModule, RouterModule],
   templateUrl: './genai.component.html',
   styleUrl: './genai.component.scss'
 })
