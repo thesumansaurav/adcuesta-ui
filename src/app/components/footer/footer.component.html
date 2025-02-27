@@ -50,9 +50,9 @@
                             </h3>
                             <div class="widget-content">
                                 <div class="text"><p>Send us a newsletter to get update</p></div>
-                                <form action="contact.html" method="post" class="subscribe-form">
+                                <form (ngSubmit)="onSubmit()" [formGroup]="subscribeForm" class="subscribe-form">
                                     <div class="form-group">
-                                        <input type="email" name="email" placeholder="Your mail address" required="">
+                                        <input type="email" name="email" placeholder="Your mail address" formControlName="email" required>
                                         <button class="submit"><i class="far fa-paper-plane"></i></button>
                                     </div>
                                 </form>

@@ -616,9 +616,9 @@
                     <h6>Stay up-to-date with the latest industry trends
 
                     </h6>
-                    <form action="index.html" method="post" class="subscribe-form">
+                    <form (ngSubmit)="onSubmit()" [formGroup]="subscribeForm" class="subscribe-form">
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="email address" required="">
+                            <input type="email" name="email" placeholder="email address" formControlName="email" required>
                             <button type="submit">Subscribe</button>
                         </div>
                     </form>
