@@ -40,7 +40,7 @@ export class FooterComponent {
       console.log('Response:', response);
       if(response.success == 'true') {
         this.subscribeForm.reset();
-        this.toastr.success(response.message);
+        this.toastr.success('You have successfully subscribed to our newsletters.Thank you !');
       }
       // You can handle the response here, e.g., show a success message
     });

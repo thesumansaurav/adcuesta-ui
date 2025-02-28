@@ -44,22 +44,22 @@
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 form-column">
                     <div class="contact-form-inner">
-                        <form class="default-form" form novalidate="novalidate" action="https://formsubmit.co/e73656bb397690c73a582fc96e0f8558" method="POST"> 
+                        <form class="default-form"  (ngSubmit)="onSubmit()" [formGroup]="subscribeForm"> 
                             <div class="row clearfix">
                                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                    <input type="text" name="username" placeholder="First name *" required="" aria-required="true">
+                                    <input type="text" name="username" placeholder="First name *" formControlName="name"  aria-required="true">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                    <input type="email" name="email" placeholder="Your mail *" required="" aria-required="true">
+                                    <input type="email" name="email" placeholder="Your mail *" formControlName="email"  aria-required="true">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                    <input type="text" name="phone" placeholder="Your Phone *" required="" aria-required="true">
+                                    <input type="text" name="phone" placeholder="Your Phone *" formControlName="phone"  aria-required="true">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                    <input type="text" name="subject" placeholder="Subject *" required="" aria-required="true">
+                                    <input type="text" name="subject" placeholder="Subject *"   formControlName="subject"  aria-required="true">
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                    <textarea name="message" placeholder="Message..."></textarea>
+                                    <textarea name="message" placeholder="Message..."  formControlName="message" ></textarea>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
                                     <button class="theme-btn style-four" type="submit" name="submit-form"><i class="fas fa-arrow-circle-right"></i>Send now</button>
