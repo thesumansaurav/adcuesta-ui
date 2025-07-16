@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-mvas',
   standalone: true,
-  imports: [RouterModule],
+  imports: [],
   templateUrl: './mvas.component.html',
   styleUrl: './mvas.component.scss'
 })

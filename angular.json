@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dilx": {
+    "dilx-n": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/dilx",
+            "outputPath": "dist/adcuesta",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -32,12 +32,12 @@
               }
             ],
             "styles": [
-              "node_modules/bootstrap/scss/bootstrap.scss",
-              "node_modules/@flaticon/flaticon-uicons/css/all/all.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/animate.css/animate.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+              "node_modules/wowjs/dist/wow.js"
             ]
           },
           "configurations": {
@@ -45,13 +45,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "15MB"
+                  "maximumWarning": "1MB",
+                  "maximumError": "4MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2MB",
-                  "maximumError": "4MB"
+                  "maximumWarning": "1MB",
+                  "maximumError": "2MB"
                 }
               ],
               "outputHashing": "all"
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "dilx:build:production"
+              "buildTarget": "dilx-n:build:production"
             },
             "development": {
-              "buildTarget": "dilx:build:development"
+              "buildTarget": "dilx-n:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "ee6a432f-0f3a-405c-979b-de23747f1816"
   }
 }

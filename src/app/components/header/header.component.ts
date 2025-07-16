@@ -1,46 +1,30 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { Router, RouterModule, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
-  constructor(public router:Router){
-    console.log(this.router.url)
-
-  }
-
-  // ngOnInit(){
-  //   console.log(this.router.url)
-  // }
-
   isScrolled = false;
-
-
-  ngOnInit(): void {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
-      window.scrollTo(0, 0);  // Ensure the page scrolls to the top on route change
-      this.checkScrollPosition(); // Re-check scroll position after scrolling to top
-    });
+  constructor(private router: Router) {
   }
 
+  isHomePage(): boolean {
+    return this.router.url === '/';  // Adjust this if your home route is different
+  }
+
+  // HostListener listens for the scroll event
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.checkScrollPosition();
+    // Get the scroll position
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Add or remove class based on scroll position
+    this.isScrolled = scrollTop > 100; // 100 can be adjusted based on the desired scroll distance
   }
-
-  private checkScrollPosition() {
-    this.isScrolled = window.scrollY > 50;
-  }
-
-  
-
 }

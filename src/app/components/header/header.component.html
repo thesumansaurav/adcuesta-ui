@@ -1,92 +1,82 @@
-<div class="mob-nav fixed-top bg-primary d-flex d-md-none align-items-center justify-content-between py-2">
-    <div class="logo ms-3" routerLink="/home">
-        <img src="/images/logo-white.svg" alt="">
-    </div>
-    <button class="btn btn-primary px-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobMenu" aria-controls="mobMenu">
-        <i class='bx bx-menu-alt-left fs-1'></i>
-    </button>
-</div>
-<div class="offcanvas offcanvas-start" tabindex="-1" id="mobMenu" aria-labelledby="mobMenuLabel">
-<div class="offcanvas-header bg-primary py-2">
-    <div class="logo" routerLink="/home">
-        <img src="/images/logo-white.svg" alt="">
-    </div>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-</div>
-<div class="offcanvas-body">
-    <nav class="navbar navbar-expand-lg bg-white">
-        <ul class="navbar-nav w-100 navbar-nav-scroll">
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#" routerLink="/home" routerLinkActive="is-active" data-bs-dismiss="offcanvas" aria-label="Close">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" routerLink="/about" routerLinkActive="is-active" data-bs-dismiss="offcanvas" aria-label="Close">About</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                Services
-                </a>
-                <ul class="dropdown-menu rounded-0 border-0">
-                    <li><a class="dropdown-item" href="#" routerLink="/branding" data-bs-dismiss="offcanvas" aria-label="Close">Branding</a></li>
-                    <li><a class="dropdown-item" href="#" routerLink="/mvas" data-bs-dismiss="offcanvas" aria-label="Close">mVAS</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/genai" routerLinkActive="is-active" data-bs-dismiss="offcanvas" aria-label="Close">Gen AI</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/blog" routerLinkActive="is-active" data-bs-dismiss="offcanvas" aria-label="Close">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/contact" routerLinkActive="is-active" data-bs-dismiss="offcanvas" aria-label="Close">Contact Us</a>
-            </li>
-        </ul>
-        </nav>
-</div>
-</div>
-<!-- Web Menu -->
- <header [class.scrolled]="isScrolled">
-<div class="main-nav fixed-top d-none d-md-block">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-        <a class="navbar-brand" routerLink="/home"><img src="/images/logo.svg" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav m-auto">
-                <li class="nav-item">
-                    <a class="nav-link" role="button" routerLink="/home" routerLinkActive="is-active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" role="button" routerLink="/about" routerLinkActive="is-active">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Services
-                    </a>
-                    <ul class="dropdown-menu p-0 border-0">
-                        <li><a class="dropdown-item" href="#" routerLink="/branding">Branding</a></li>
-                        <li><a class="dropdown-item" href="#" routerLink="/mvas">mVAS</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/genai" routerLinkActive="is-active" data-bs-dismiss="offcanvas" aria-label="Close">Gen AI</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" role="button" routerLink="/blog" routerLinkActive="is-active" aria-disabled="true">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" role="button" routerLink="/contact" routerLinkActive="is-active" aria-disabled="true">Contact Us</a>
-                </li>
+<nav class="navbar navbar-expand-lg position-absolute top-0 z-1 w-100" [class.fixed-header]="isScrolled" [ngClass]="{'home-page-header': isHomePage(), 'inner-page-header': !isHomePage()}">
+    <div class="container">
+      <a class="navbar-brand" href="#"> <img width="180px" src="/images/logo.svg" alt=""> </a>
+      <a class="navbar-brand-innerpages" href="#"> <img width="180px" src="/images/logo-white.svg" alt=""> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+               routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/digitalmarketing" routerLinkActive="active">Digital Marketing</a></li>
+              <li><a class="dropdown-item" routerLink="/mvas" routerLinkActive="active">mVAS</a></li>
             </ul>
-            
-            <!-- <button type="button" class="btn btn-primary rounded-pill rotrate-icon">
-                <span class="z-1">Call To Action</span>
-                <i class='bx bx-plus'></i>
-            </button> -->
-        </div>
-        </div>
-    </nav>
-</div>
-</header>
+          </li>
+          
+  
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/genai" routerLinkActive="active">Gen AI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/blog" routerLinkActive="active">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel"> <img width="180px" src="/images/logo-white.svg" alt=""> </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      
+      <ul class="navbar-nav mobnav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/">Home</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-dismiss="offcanvas" aria-label="Close">About</a>
+        </li> -->
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/digitalmarketing">Digital Marketing</a></li>
+            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/mvas">mVAS</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/genai" data-bs-dismiss="offcanvas" aria-label="Close">Gen AI</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/contact">Contact Us</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
