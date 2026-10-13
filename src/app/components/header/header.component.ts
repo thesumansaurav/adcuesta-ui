@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { Component, ElementRef, HostListener, OnInit, inject } from '@angular/core';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -9,22 +10,62 @@ import { Router, RouterModule } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isScrolled = false;
-  constructor(private router: Router) {
+  isServicesOpen = false;
+  isMobileServicesOpen = false;
+
+  private router = inject(Router);
+  private elementRef = inject(ElementRef);
+
+  ngOnInit() {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      this.isServicesOpen = false;
+      this.isMobileServicesOpen = false;
+    });
   }
 
   isHomePage(): boolean {
-    return this.router.url === '/';  // Adjust this if your home route is different
+    return this.router.url === '/' || this.router.url === '';
   }
 
-  // HostListener listens for the scroll event
+  isServicesActive(): boolean {
+    const url = this.router.url;
+    return url.startsWith('/digitalmarketing') || url.startsWith('/mvas');
+  }
+
+  toggleServices(event: MouseEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.isServicesOpen = !this.isServicesOpen;
+  }
+
+  toggleMobileServices(event: MouseEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.isMobileServicesOpen = !this.isMobileServicesOpen;
+  }
+
+  closeServices() {
+    this.isServicesOpen = false;
+    this.isMobileServicesOpen = false;
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    if (this.isServicesOpen || this.isMobileServicesOpen) {
+      const target = event.target as HTMLElement;
+      if (!this.elementRef.nativeElement.querySelector('.nav-item.dropdown')?.contains(target)) {
+        this.isServicesOpen = false;
+      }
+    }
+  }
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    // Get the scroll position
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // Add or remove class based on scroll position
-    this.isScrolled = scrollTop > 100; // 100 can be adjusted based on the desired scroll distance
+    this.isScrolled = scrollTop > 100;
   }
 }

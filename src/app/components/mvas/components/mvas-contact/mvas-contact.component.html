@@ -1,0 +1,129 @@
+<section class="vas-contact-section">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <!-- Left Column: Partnership Info -->
+      <div class="col-lg-6 col-md-12">
+        <div class="contact-info-block">
+          <div class="sec-title">
+            <div class="title"><i class="fas fa-handshake"></i><span>Get In Touch</span></div>
+            <h3>Let's build a <span class="gradient-text">VAS partnership</span></h3>
+            <p>Whether you're a telecom operator looking to boost ARPU with new digital services, a content owner seeking distribution, or a technology partner — we'd love to talk.</p>
+          </div>
+
+          <div class="contact-items-list">
+            <div class="contact-info-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-building"></i>
+              </div>
+              <div class="card-details">
+                <span class="label">COMPANY</span>
+                <div class="value">Adcuesta Digital</div>
+                <div class="sub">UAE · Iraq · Vietnam · Philippines · KSA · France · Germany</div>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="card-details">
+                <span class="label">EMAIL</span>
+                <div class="value">partnerships&#64;adcuesta.ae</div>
+                <div class="sub">For telco partnerships & business development</div>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="card-icon">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <div class="card-details">
+                <span class="label">WEBSITE</span>
+                <div class="value">adcuesta.ae</div>
+                <div class="sub">Global headquarters</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="trust-badges-wrap">
+            <span class="trust-badge"><i class="fa-solid fa-shield-halved me-1"></i> GDPR Compliant</span>
+            <span class="trust-badge"><i class="fa-solid fa-bolt me-1"></i> Carrier-Grade</span>
+            <span class="trust-badge"><i class="fa-solid fa-circle-check me-1"></i> 7 Markets Live</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Form -->
+      <div class="col-lg-6 col-md-12">
+        <div class="form-container-card">
+          <!-- Success State -->
+          <div *ngIf="submitted" class="success-message-box text-center">
+            <div class="success-icon-wrap">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h4>Message Sent</h4>
+            <p>Thanks for reaching out! Our partnerships team will get back to you within 48 hours.</p>
+          </div>
+
+          <!-- Form State -->
+          <form *ngIf="!submitted" (ngSubmit)="onSubmit()" #contactForm="ngForm" class="partnership-form">
+            <h4 class="form-heading">Send us a message</h4>
+
+            <div class="form-group mb-3">
+              <label class="form-label">Your Name <span class="required-star">*</span></label>
+              <input 
+                type="text" 
+                class="form-control" 
+                placeholder="John Doe" 
+                name="name" 
+                [(ngModel)]="form.name" 
+                required 
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label class="form-label">Email <span class="required-star">*</span></label>
+              <input 
+                type="email" 
+                class="form-control" 
+                placeholder="john@company.com" 
+                name="email" 
+                [(ngModel)]="form.email" 
+                required 
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label class="form-label">Company / Operator</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                placeholder="Etisalat, Zain, Orange..." 
+                name="company" 
+                [(ngModel)]="form.company" 
+              />
+            </div>
+
+            <div class="form-group mb-4">
+              <label class="form-label">Message <span class="required-star">*</span></label>
+              <textarea 
+                rows="4" 
+                class="form-control" 
+                placeholder="Tell us about your partnership interest..." 
+                name="message" 
+                [(ngModel)]="form.message" 
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" [disabled]="!contactForm.form.valid" class="btn-submit-partnership">
+              <span>Send Message</span>
+              <i class="fa-solid fa-paper-plane ms-2"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

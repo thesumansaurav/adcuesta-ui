@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg position-absolute top-0 z-1 w-100" [class.fixed-header]="isScrolled" [ngClass]="{'home-page-header': isHomePage(), 'inner-page-header': !isHomePage()}">
+<nav class="navbar navbar-expand-lg position-absolute top-0 w-100" [class.fixed-header]="isScrolled" [ngClass]="{'home-page-header': isHomePage(), 'inner-page-header': !isHomePage()}">
     <div class="container">
       <a class="navbar-brand" href="#"> <img width="180px" src="/images/logo.svg" alt=""> </a>
       <a class="navbar-brand-innerpages" href="#"> <img width="180px" src="/images/logo-white.svg" alt=""> </a>
@@ -8,19 +8,23 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            <a class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li> -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
-               routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">
+          <li class="nav-item dropdown" [class.show]="isServicesOpen">
+            <a class="nav-link dropdown-toggle"
+               [class.active]="isServicesActive()"
+               role="button"
+               href="javascript:void(0)"
+               (click)="toggleServices($event)"
+               [attr.aria-expanded]="isServicesOpen">
               Services
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" routerLink="/digitalmarketing" routerLinkActive="active">Digital Marketing</a></li>
-              <li><a class="dropdown-item" routerLink="/mvas" routerLinkActive="active">mVAS</a></li>
+            <ul class="dropdown-menu" [class.show]="isServicesOpen">
+              <li><a class="dropdown-item" routerLink="/digitalmarketing" routerLinkActive="active" (click)="closeServices()">Digital Marketing</a></li>
+              <li><a class="dropdown-item" routerLink="/mvas" routerLinkActive="active" (click)="closeServices()">mVAS</a></li>
             </ul>
           </li>
           
@@ -55,13 +59,18 @@
           <a class="nav-link" href="#" data-bs-dismiss="offcanvas" aria-label="Close">About</a>
         </li> -->
         
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown" [class.show]="isMobileServicesOpen">
+          <a class="nav-link dropdown-toggle" 
+             [class.active]="isServicesActive()"
+             href="javascript:void(0)" 
+             role="button" 
+             (click)="toggleMobileServices($event)"
+             [attr.aria-expanded]="isMobileServicesOpen">
             Services
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/digitalmarketing">Digital Marketing</a></li>
-            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/mvas">mVAS</a></li>
+          <ul class="dropdown-menu" [class.show]="isMobileServicesOpen">
+            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/digitalmarketing" (click)="closeServices()">Digital Marketing</a></li>
+            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" aria-label="Close" routerLink="/mvas" (click)="closeServices()">mVAS</a></li>
           </ul>
         </li>
 
