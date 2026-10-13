@@ -1,0 +1,73 @@
+<section class="coverage-section bg-color-1">
+  <div class="container">
+    <div class="sec-title text-center">
+      <div class="title"><i class="fas fa-globe"></i><span>Global footprint</span></div>
+      <h3>Operator distribution in <span class="gradient-text">7+ high-growth markets</span></h3>
+      <p>Live distribution directly to subscriber bases via carrier billing and direct telecom partnerships.</p>
+    </div>
+
+    <!-- Top Row: 4 Boxes -->
+    <div class="row g-4 mb-4 justify-content-center">
+      <div 
+        *ngFor="let country of topCountries" 
+        class="col-xl-3 col-lg-3 col-md-6 col-sm-12"
+      >
+        <div class="country-card">
+          <div class="country-header">
+            <span class="country-flag">{{ country.flag }}</span>
+            <div class="country-meta">
+              <h5 class="country-name">{{ country.name }}</h5>
+              <span class="region-badge">{{ country.region }}</span>
+            </div>
+          </div>
+
+          <div class="operators-wrap">
+            <div class="operators-label">Active Operators</div>
+            <div class="operator-pills">
+              <span 
+                *ngFor="let op of country.operators" 
+                class="op-pill"
+                [style.--op-color]="op.color"
+              >
+                <span class="op-dot"></span>
+                {{ op.name }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Row: 3 Boxes Centered -->
+    <div class="row g-4 justify-content-center">
+      <div 
+        *ngFor="let country of bottomCountries" 
+        class="col-xl-4 col-lg-4 col-md-6 col-sm-12"
+      >
+        <div class="country-card">
+          <div class="country-header">
+            <span class="country-flag">{{ country.flag }}</span>
+            <div class="country-meta">
+              <h5 class="country-name">{{ country.name }}</h5>
+              <span class="region-badge">{{ country.region }}</span>
+            </div>
+          </div>
+
+          <div class="operators-wrap">
+            <div class="operators-label">Active Operators</div>
+            <div class="operator-pills">
+              <span 
+                *ngFor="let op of country.operators" 
+                class="op-pill"
+                [style.--op-color]="op.color"
+              >
+                <span class="op-dot"></span>
+                {{ op.name }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
