@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MvasHeroComponent } from './components/mvas-hero/mvas-hero.component';
 import { MvasCapabilitiesComponent } from './components/mvas-capabilities/mvas-capabilities.component';
 import { MvasProductsComponent } from './components/mvas-products/mvas-products.component';
 import { MvasCoverageComponent } from './components/mvas-coverage/mvas-coverage.component';
@@ -12,6 +13,7 @@ import { MvasContactComponent } from './components/mvas-contact/mvas-contact.com
   standalone: true,
   imports: [
     CommonModule,
+    MvasHeroComponent,
     MvasCapabilitiesComponent,
     MvasProductsComponent,
     MvasCoverageComponent,
