@@ -1,69 +1,94 @@
-<section class="coverage-section bg-color-1">
+<section class="coverage-section">
+  <div class="coverage-glow glow-a"></div>
+  <div class="coverage-glow glow-b"></div>
+
   <div class="container">
     <div class="sec-title text-center">
-      <div class="title"><i class="fas fa-globe"></i><span>Global footprint</span></div>
-      <h3>Operator distribution in <span class="gradient-text">7+ high-growth markets</span></h3>
-      <p>Live distribution directly to subscriber bases via carrier billing and direct telecom partnerships.</p>
+      <div class="title"><span class="dot"></span><span>AI, distributed</span></div>
+      <h3>Intelligence that travels <span class="gradient-text">across real markets</span></h3>
+      <p>Our AI products are designed for local relevance and built to scale through operator distribution.</p>
     </div>
 
-    <!-- Top Row: 4 Boxes -->
-    <div class="row g-4 mb-4 justify-content-center">
-      <div 
-        *ngFor="let country of topCountries" 
-        class="col-xl-3 col-lg-3 col-md-6 col-sm-12"
-      >
-        <div class="country-card">
-          <div class="country-header">
-            <span class="country-flag">{{ country.flag }}</span>
-            <div class="country-meta">
-              <h5 class="country-name">{{ country.name }}</h5>
-              <span class="region-badge">{{ country.region }}</span>
-            </div>
+    <div class="row g-4 align-items-stretch">
+      <!-- Map / region clusters -->
+      <div class="col-lg-7">
+        <div class="map-card">
+          <div class="globe">
+            <svg viewBox="0 0 400 300" fill="none" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <radialGradient id="coverage-glow" cx="50%" cy="50%">
+                  <stop offset="0%" stop-color="#1f4a97" stop-opacity="0.15" />
+                  <stop offset="100%" stop-color="#1f4a97" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#coverage-glow)" />
+              <circle cx="200" cy="150" r="100" stroke="#1f4a97" stroke-width="1.5" opacity="0.2" />
+              <circle cx="200" cy="150" r="70" stroke="#1f4a97" stroke-width="1" opacity="0.15" />
+              <circle cx="200" cy="150" r="40" stroke="#1f4a97" stroke-width="1" opacity="0.1" />
+              <ellipse cx="200" cy="150" rx="100" ry="30" stroke="#1f4a97" stroke-width="1" opacity="0.15" />
+              <ellipse cx="200" cy="150" rx="100" ry="60" stroke="#1f4a97" stroke-width="1" opacity="0.1" />
+              <ellipse cx="200" cy="150" rx="30" ry="100" stroke="#1f4a97" stroke-width="1" opacity="0.15" />
+              <ellipse cx="200" cy="150" rx="60" ry="100" stroke="#1f4a97" stroke-width="1" opacity="0.1" />
+              <g *ngFor="let pin of pins" [class.pin-active]="hovered === pin.code">
+                <circle [attr.cx]="pin.x" [attr.cy]="pin.y" r="6" [attr.fill]="pin.color" opacity="0.3" />
+                <circle [attr.cx]="pin.x" [attr.cy]="pin.y" r="3" [attr.fill]="pin.color" />
+                <circle [attr.cx]="pin.x" [attr.cy]="pin.y" r="3" fill="none" [attr.stroke]="pin.color" stroke-width="1" opacity="0.5">
+                  <animate attributeName="r" from="3" to="12" dur="2s" repeatCount="indefinite" />
+                  <animate attributeName="opacity" from="0.5" to="0" dur="2s" repeatCount="indefinite" />
+                </circle>
+              </g>
+            </svg>
           </div>
 
-          <div class="operators-wrap">
-            <div class="operators-label">Active Operators</div>
-            <div class="operator-pills">
-              <span 
-                *ngFor="let op of country.operators" 
-                class="op-pill"
-                [style.--op-color]="op.color"
-              >
-                <span class="op-dot"></span>
-                {{ op.name }}
-              </span>
+          <div class="regions">
+            <div class="region" *ngFor="let region of regions" [ngClass]="'tone-' + region.tone">
+              <h4 class="region-title"><i class="fas fa-location-dot"></i>{{ region.name }}</h4>
+              <div class="chips">
+                <div
+                  class="country-chip"
+                  *ngFor="let country of byRegion(region.name)"
+                  [class.active]="hovered === country.code"
+                  (mouseenter)="setHovered(country.code)"
+                  (mouseleave)="setHovered(null)"
+                >
+                  <img class="flag" [src]="flagUrl(country.code)" [alt]="country.name + ' flag'" loading="lazy" />
+                  <div>
+                    <div class="chip-name">{{ country.name }}</div>
+                    <div class="chip-ops">
+                      <span *ngFor="let op of country.operators" [style.color]="op.color">{{ op.name }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Bottom Row: 3 Boxes Centered -->
-    <div class="row g-4 justify-content-center">
-      <div 
-        *ngFor="let country of bottomCountries" 
-        class="col-xl-4 col-lg-4 col-md-6 col-sm-12"
-      >
-        <div class="country-card">
-          <div class="country-header">
-            <span class="country-flag">{{ country.flag }}</span>
-            <div class="country-meta">
-              <h5 class="country-name">{{ country.name }}</h5>
-              <span class="region-badge">{{ country.region }}</span>
-            </div>
-          </div>
-
-          <div class="operators-wrap">
-            <div class="operators-label">Active Operators</div>
-            <div class="operator-pills">
-              <span 
-                *ngFor="let op of country.operators" 
-                class="op-pill"
-                [style.--op-color]="op.color"
-              >
-                <span class="op-dot"></span>
-                {{ op.name }}
-              </span>
+      <!-- Operator list -->
+      <div class="col-lg-5">
+        <div class="network-card">
+          <h4 class="network-title"><i class="fas fa-tower-broadcast"></i>AI distribution network</h4>
+          <div class="network-list">
+            <div
+              class="network-row"
+              *ngFor="let country of countries"
+              [class.active]="hovered === country.code"
+              (mouseenter)="setHovered(country.code)"
+              (mouseleave)="setHovered(null)"
+            >
+              <img class="flag" [src]="flagUrl(country.code)" [alt]="country.name + ' flag'" loading="lazy" />
+              <div>
+                <div class="row-name">{{ country.name }}</div>
+                <div class="row-ops">
+                  <span
+                    class="op-pill"
+                    *ngFor="let op of country.operators"
+                    [style.color]="op.color"
+                    [style.background]="op.color + '15'"
+                  >{{ op.name }}</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
