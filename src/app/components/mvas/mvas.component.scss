@@ -2,3 +2,14 @@
   display: block;
   width: 100%;
 }
+
+.mvas-header-strip {
+  height: 86px;
+  background: linear-gradient(105deg, #1f4a97 0%, #1675d1 55%, #29b9ef 100%);
+}
+
+@media (max-width: 767px) {
+  .mvas-header-strip {
+    height: 70px;
+  }
+}

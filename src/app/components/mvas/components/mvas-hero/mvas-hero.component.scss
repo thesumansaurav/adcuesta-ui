@@ -1,15 +1,15 @@
 .mvas-hero-section {
   position: relative;
-  padding: 175px 0 100px 0;
+  padding: 105px 0 100px 0;
   background: linear-gradient(180deg, #f0f5ff 0%, #ffffff 100%);
   overflow: hidden;
 
   @media (max-width: 991px) {
-    padding: 140px 0 70px 0;
+    padding: 95px 0 70px 0;
   }
 
   @media (max-width: 767px) {
-    padding: 140px 0 50px 0;
+    padding: 90px 0 50px 0;
   }
 
   .hero-bg-blobs {
@@ -617,5 +617,4 @@
     opacity: 0.8;
   }
 }
-
 
