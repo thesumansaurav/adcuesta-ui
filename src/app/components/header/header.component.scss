@@ -31,6 +31,7 @@ nav{
                     color: $white;
                 }
             }
+
             .dropdown-menu{
                 display: block !important;
                 visibility: hidden;
@@ -236,6 +237,31 @@ nav{
         }
         .navbar-brand-innerpages{
             display: none;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    nav.navbar {
+        height: 70px;
+        min-height: 70px;
+        padding: 0 !important;
+
+        .container {
+            height: 100%;
+            align-items: center;
+        }
+
+        .navbar-brand,
+        .navbar-brand-innerpages,
+        .navbar-toggler {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .navbar-brand img,
+        .navbar-brand-innerpages img {
+            display: block;
         }
     }
 }
