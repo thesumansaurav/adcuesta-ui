@@ -1,18 +1,20 @@
 <section class="about-section">
-  <div class="about-glow"></div>
+  <div class="about-glow glow-a"></div>
+  <div class="about-glow glow-b"></div>
+
   <div class="container">
-    <div class="row align-items-end g-5">
+    <div class="row align-items-center g-5">
       <div class="col-lg-5">
-        <div class="about-pill"><span class="dot"></span>The Adcuesta approach</div>
-        <h2 class="about-title">We turn powerful AI into products people want to use.</h2>
+        <div class="about-pill"><i class="fas fa-circle-dot"></i><span>The Adcuesta approach</span></div>
+        <h2 class="about-title">We turn powerful AI <span class="gradient-text">into products people want to use.</span></h2>
         <p class="about-text">Curious by nature. Practical by design. Focused on the moment technology becomes genuinely helpful.</p>
         <a href="#capabilities" class="about-link" (click)="scrollTo('capabilities', $event)">
-          Explore our capabilities <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          Explore our capabilities <i class="fa-solid fa-arrow-right"></i>
         </a>
       </div>
 
       <div class="col-lg-7">
-        <div class="row g-3">
+        <div class="row g-4">
           <div class="col-sm-6" *ngFor="let pillar of pillars">
             <div class="pillar-card" [style.--pillar-color]="pillar.color">
               <div class="pillar-top">
