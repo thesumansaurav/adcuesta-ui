@@ -61,11 +61,13 @@
         }
     }
     .bottom-content{
+        margin-top: 40px;
         .inner-box{
             .single-item{
                 .inner {
                     position: relative;
                     padding-left: 60px;
+                    overflow-wrap: anywhere;
                     .icon-box {
                         position: absolute;
                         left: 0px;
@@ -83,6 +85,7 @@
                         line-height: 26px;
                         font-size: 16px;
                         color: #444;
+                        margin-bottom: 0;
                     }
                     a{
                         color: #444;
@@ -101,10 +104,43 @@
 
 }
 
+@media (max-width: 991.98px) {
+    .contact-section {
+        padding: 70px 0px;
+        .image-box {
+            margin: 0px 20px 30px 20px;
+        }
+        .bottom-content {
+            margin-top: 30px;
+        }
+    }
+}
+
 @media (max-width: 575.98px) {
     .contact-section{
+        padding: 50px 0px;
         .upper-content {
             margin-bottom: 10px;
+        }
+        .image-box {
+            margin: 0px 10px 24px 10px;
+        }
+        .bottom-content {
+            margin-top: 24px;
+            .inner-box .single-item .inner {
+                padding-left: 46px;
+                .icon-box {
+                    font-size: 30px;
+                    line-height: 30px;
+                }
+                h3 {
+                    font-size: 20px;
+                }
+                p, a {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
         }
     }
 }
