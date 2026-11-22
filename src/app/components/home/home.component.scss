@@ -12,6 +12,7 @@
         background-repeat: no-repeat;
         background-position: top center;
         background-size: cover;
+        pointer-events: none !important;
     }
     .shap-layer {
         position: absolute;
@@ -22,6 +23,7 @@
         background-position: center;
         background-repeat: no-repeat;
         z-index: 1;
+        pointer-events: none !important;
     }
     .vector-icon {
         position: absolute;
@@ -32,8 +34,10 @@
         width: 100%;
         height: 100%;
         margin: 0 auto;
+        pointer-events: none !important;
         .vector {
             position: absolute;
+            pointer-events: none !important;
         }
         .vector-1 {
             width: 100%;
